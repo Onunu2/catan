@@ -1,0 +1,13 @@
+<div class="main">
+  <div class="flex">
+  <span [style.color]="'white'">{{color}}</span>
+  <input type="number" [(ngModel)]="turn" (ngModelChange)="turnChange()"/>
+  </div>
+  <img (dblclick)="removePlayer()"  [src]="'/assets/images/'+color + '.png'" >
+  <div style="{flex-direction: row}">
+    <button (click)="minus()"> - </button>
+    <span [style.color]="valueColor()"> {{value}} </span>
+    <button (click)="plus()"> + </button>
+  </div>
+</div>
+
